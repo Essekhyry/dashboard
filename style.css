@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* setting the global styles */
+:root {
+    --lighdark: #31353F;
+    --blue: #3A6FF8;
+    --dark:#1B2028;
+    --textgray:#9E9E9E;
+  }
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif; 
+    background-color: var(--lighdark);
+    overflow-y: hidden;
+    /* overflow-x: hidden; */
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--textgray);
+}
+.container{
+     display: flex;
+     flex-direction: row;
+}
+/* aside */
+.sidebar{
+    background-color: var(--dark);
+    width: 15%; 
+    padding: 1rem;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+.sidebar .links{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+
+}
+.sidebar .link{
+    font-size: 14px;
+    line-height: 3rem;
+    padding: 5px;
+}
+.link a{ 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.link a i{ 
+    font-weight: 500;
+}
+.active{
+    background-color: var(--blue);
+    border-radius: 10px;
+} 
+.active a{
+    color: white;
+    font-weight: 600;
+}
+.bottom{
+   margin-top: auto;
+   background-color: var(--dark);
+}
+/* main section */
+.main{
+    color: white;
+    width: 85%;
+    height: 100%;
+    padding: 2rem;  
+    margin-left: 15%; 
+    position: absolute; 
+    overflow-y: auto; 
+}
+.main .heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .title{
+    width: 10%;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+.search form{
+    background-color: var(--dark);  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+.search input{
+    background-color: var(--dark); 
+    width: 90%; 
+}
+.search input::placeholder { /* Most modern browsers support this now. */
+    color:    var(--textgray);
+    font-family: 'Poppins',sans-serif;
+ }
+ input[type=text]:focus { 
+    color: white;
+    font-family: 'poppins';
+  }
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem; 
+}
+.profile img{
+border-radius: 10px;
+}
+
+/* cards */
+.cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.card{
+    background-color: var(--dark);  
+    padding: 1rem;
+    border-radius: 15px;
+    width: 25%;
+}
+.card_heading{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.card_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 1rem;
+}
+.card_info h5{
+    color: var(--textgray);
+    font-weight: 400;
+}
+.card_name{
+    display: flex;
+    flex-direction: column;
+}
+.card_heading i{
+color: #1ECB4F;
+font-weight: 900;
+font-size: 1.5rem;
+}
+.card .card_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.card .card_content .details h3{
+    font-size: 21px;
+}
+
+.card .card_content .details p{
+    color: #1ECB4F;
+}
+.card:last-child i{
+    color:#F46D22 ; 
+}
+.card:last-child .details p{
+    color: #F46D22;
+}
+/* content */
+.content{ 
+    height: 100%;
+    width: 100%; 
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.content .left_section{
+    width:360px;
+    height: 100%; 
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+}
+.content .left_section .credit_card{
+    background-image: url('./images/cerdit_card.png');
+    background-repeat: no-repeat;
+    background-position: cover; 
+    background-size: cover;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    gap: 1rem;
+    width: 360px;
+}
+.content .left_section .credit_card .head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .left_section .credit_card .body h2{
+    font-size: 18px;
+    font-weight: 300;
+}
+.content .left_section .credit_card .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .left_section .credit_card .footer .name p{
+   font-size: 12px;
+   font-weight: 300;
+}
+/* start portfolio */
+.portfolio{
+    width: 360px;
+    padding: 2rem 1rem 2rem 1rem;
+    background-color: var(--dark);
+    border-radius: 1rem;
+    height: auto;
+}
+.portfolio h2{
+    padding: 10px;
+}
+.portfolio .coins img{
+    /* width: 80px;
+    height:80px; */
+}
+.portfolio .coins {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px;
+}
+.portfolio .coins .name{
+    display: flex; 
+    gap: 1rem;
+}
+.portfolio .coins .name .details{
+    display: flex;
+    flex-direction: column;
+}
+.portfolio .coins .name .details p{
+    color: var(--textgray);
+    font-weight: 300;
+}
+.portfolio .coins .trades {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+} 
+/* up down */
+.up{
+    color: #1ECB4F;
+}
+.down{
+    color: #F46D22;
+}
+/* right section */
+
+.content .right_section{
+    width:calc(100% - 360px);
+    height: 100%; 
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+}
+.content .right_section .chart{
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--dark);
+}
+.content .right_section .chart .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.content .right_section .chart .head .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.dollar i{
+    color: var(--textgray); 
+}
+.settings{
+    border: 1px solid var(--textgray);
+    padding: 13px;
+    border-radius: 10px;
+}
+.content .right_section .chart .icons .dollar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid var(--textgray);
+    padding: 10px;
+    border-radius: 10px;
+} 
+
+.content .right_section .chart .chart_content .left_content .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.content .right_section .chart .chart_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .right_section .chart .chart_content .right_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.content .right_section .chart .chart_content .right_content span {
+    color: var(--textgray);
+    border:1px solid var(--textgray); 
+    padding: 2px 15px 2px 15px;  
+    border-radius: 15px !important;
+}
+.content .right_section .chart .chart_content .right_content p{
+    background-color: #3A6FF8;  
+    color: white; 
+    padding: 2px 15px 2px 15px;  
+    border-radius: 20px;
+    border: 4px solild red !important;
+}
+.chart_amount{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* start live market section */
+.live_market{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--dark);
+}
+.live_market .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 1rem;
+}
+.live_market .head p{
+    color: var(--textgray);
+    padding: 6px 16px;
+    border: 1px solid var(--textgray);
+    border-radius: 10px;
+}
+.live_market .head p:hover{
+    cursor: pointer;
+}
+ 
+table{
+    text-align: left;
+    width: 100%;
+}
+.first_td{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* chart data */
+.chart_data{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.chart_data .left_column{
+    margin-top: 2rem;
+    color: var(--textgray);
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;
+    height:246px;
+} 
+ 
+.chart_data{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.center_column{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%; 
+    position: relative;
+}
+.bar{
+    background-color: #3A6FF8;
+    opacity: 0.4;
+}
+.bar1{ 
+    width: 10px;
+    height: 16px;
+}
+.bar2{ 
+    width: 10px;
+    height: 22px;
+}
+.bar3{ 
+    width: 10px;
+    height: 32px;
+}
+.bar4{ 
+    width: 10px;
+    height: 17px;
+}
+.bar5{ 
+    width: 10px;
+    height: 16px;
+}
+.bar6{ 
+    width: 10px;
+    height: 13px;
+}
+.bar7{ 
+    width: 10px;
+    height:24px;
+}
+.bar8{ 
+    width: 10px;
+    height: 14px;
+}
+.bar9{ 
+    width: 10px;
+    height: 8px;
+}
+.bar10{ 
+    width: 10px;
+    height: 16px;
+}
+.bottom_column{
+    margin-left: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--textgray);
+    font-weight: 400;
+}
+/* testing the css */
+.parent {
+    width: 100%;
+    height: 300px;
+    position: absolute; 
+  }
+  .magicpattern { 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg height=%22auto%22 viewBox=%220 0 2000 500%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d=%22m0 80.047 65 159.096 65-144.322 65 162.77 65 29.31 65-132.074 65 173.6 65-78.12 65-36.92 65-12.769 65-107.642 65 280.248 65-221.18 65 186.35 65 33.908 65-279.43 65 46.522 65 161.023 65 50.427 65-250.828 65 51.862 65-2.289 65 172.95 65-60.124 65-183.646 65 282.527 65-.649 65-12.704 65-218.486 65 41.422 65 9.622 65 80.843L2000 500H0Z%22 fill=%22%23444cf71a%22%2F%3E%3Cpath d=%22m0 80.047 65 159.096 65-144.322 65 162.77 65 29.31 65-132.074 65 173.6 65-78.12 65-36.92 65-12.769 65-107.642 65 280.248 65-221.18 65 186.35 65 33.908 65-279.43 65 46.522 65 161.023 65 50.427 65-250.828 65 51.862 65-2.289 65 172.95 65-60.124 65-183.646 65 282.527 65-.649 65-12.704 65-218.486 65 41.422 65 9.622 65 80.843%22 fill=%22none%22 stroke=%22%23444cf7%22 stroke-width=%224%22%2F%3E%3Cg fill=%22%23444cf7%22%3E%3Ccircle cy=%2280.047%22 r=%228%22%2F%3E%3Ccircle cx=%2265%22 cy=%22239.143%22 r=%228%22%2F%3E%3Ccircle cx=%22130%22 cy=%2294.821%22 r=%228%22%2F%3E%3Ccircle cx=%22195%22 cy=%22257.592%22 r=%228%22%2F%3E%3Ccircle cx=%22260%22 cy=%22286.9%22 r=%228%22%2F%3E%3Ccircle cx=%22325%22 cy=%22154.827%22 r=%228%22%2F%3E%3Ccircle cx=%22390%22 cy=%22328.426%22 r=%228%22%2F%3E%3Ccircle cx=%22455%22 cy=%22250.307%22 r=%228%22%2F%3E%3Ccircle cx=%22520%22 cy=%22213.387%22 r=%228%22%2F%3E%3Ccircle cx=%22585%22 cy=%22200.618%22 r=%228%22%2F%3E%3Ccircle cx=%22650%22 cy=%2292.976%22 r=%228%22%2F%3E%3Ccircle cx=%22715%22 cy=%22373.224%22 r=%228%22%2F%3E%3Ccircle cx=%22780%22 cy=%22152.045%22 r=%228%22%2F%3E%3Ccircle cx=%22845%22 cy=%22338.394%22 r=%228%22%2F%3E%3Ccircle cx=%22910%22 cy=%22372.302%22 r=%228%22%2F%3E%3Ccircle cx=%22975%22 cy=%2292.871%22 r=%228%22%2F%3E%3Ccircle cx=%221040%22 cy=%22139.394%22 r=%228%22%2F%3E%3Ccircle cx=%221105%22 cy=%22300.417%22 r=%228%22%2F%3E%3Ccircle cx=%221170%22 cy=%22350.844%22 r=%228%22%2F%3E%3Ccircle cx=%221235%22 cy=%22100.016%22 r=%228%22%2F%3E%3Ccircle cx=%221300%22 cy=%22151.878%22 r=%228%22%2F%3E%3Ccircle cx=%221365%22 cy=%22149.589%22 r=%228%22%2F%3E%3Ccircle cx=%221430%22 cy=%22322.539%22 r=%228%22%2F%3E%3Ccircle cx=%221495%22 cy=%22262.415%22 r=%228%22%2F%3E%3Ccircle cx=%221560%22 cy=%2278.769%22 r=%228%22%2F%3E%3Ccircle cx=%221625%22 cy=%22361.296%22 r=%228%22%2F%3E%3Ccircle cx=%221690%22 cy=%22360.647%22 r=%228%22%2F%3E%3Ccircle cx=%221755%22 cy=%22347.943%22 r=%228%22%2F%3E%3Ccircle cx=%221820%22 cy=%22129.457%22 r=%228%22%2F%3E%3Ccircle cx=%221885%22 cy=%22170.879%22 r=%228%22%2F%3E%3Ccircle cx=%221950%22 cy=%22180.501%22 r=%228%22%2F%3E%3Ccircle cx=%222015%22 cy=%22261.344%22 r=%228%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  }
+  
+  
